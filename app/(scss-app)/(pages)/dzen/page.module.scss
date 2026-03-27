@@ -1,0 +1,24 @@
+@use "app/(scss-app)/theme" as *;
+
+.page {
+  padding: $space-md $space-xl 0 $space-md;
+  width: 100%;
+  max-width: 1488px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(320px, 360px));
+  gap: $space-md;
+
+  @include media-down($bp-3xl) {
+    grid-template-columns: repeat(3, minmax(320px, 360px));
+  }
+
+  @include media-down($bp-xl) {
+    grid-template-columns: repeat(2, minmax(320px, 360px));
+  }
+
+  @include media-down($bp-md) {
+    grid-template-columns: repeat(1, minmax(320px, 360px));
+  }
+}

@@ -1,0 +1,89 @@
+@use "app/(scss-app)/theme" as *;
+
+.searchDropdown {
+  position: absolute;
+  top: calc(100% + $space-2xs);
+  left: 0;
+  width: 100%;
+  background: $white;
+  border-radius: $space-md;
+  padding: $space-md;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: $space-md;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+  grid-template-columns: repeat(4, minmax(320px, 1fr));
+
+  @include media-down($bp-3xl) {
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+  }
+
+  @include media-down($bp-xl) {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+  }
+
+  @include media-down($bp-md) {
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
+  }
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.card {
+  position: relative;
+  height: 234px;
+  border-radius: $space-md;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+
+  &:hover .image {
+    transform: scale(1.08);
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.overlay {
+  @include absolute-fill;
+  padding: $space-sm;
+  display: grid;
+  align-content: end;
+  justify-content: start;
+  color: $white;
+  pointer-events: none;
+
+  h3 {
+    font-size: $text-sm;
+    font-weight: $fw-semi-bold;
+    margin-bottom: $space-2xs;
+    z-index: 2;
+  }
+
+  p {
+    font-size: $space-sm;
+    opacity: 0.8;
+    z-index: 2;
+  }
+
+  &::before {
+    @include absolute-fill;
+    content: "";
+    transition: opacity 0.3s ease;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    opacity: 1;
+    z-index: 1;
+  }
+}

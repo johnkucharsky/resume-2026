@@ -1,0 +1,69 @@
+@use "app/(scss-app)/theme" as *;
+
+.nav {
+  padding: $space-md $space-md 0 $space-md;
+  min-width: 208px;
+
+  @include media-down($bp-2xl) {
+    min-width: 80px;
+  }
+
+  .tab {
+    @include button();
+    display: flex;
+    gap: $space-xs;
+    align-items: center;
+    padding: $space-xs $space-xs $space-xs $space-sm;
+    width: 100%;
+    border-radius: $space-sm;
+    transition: background-color ease 0.2s;
+
+    &:hover {
+      background-color: $grey-1;
+    }
+
+    &.active {
+      background-color: $grey-1;
+    }
+
+    .text {
+      font-size: $text-md;
+    }
+  }
+
+  .secondaryLinksContainer {
+    padding: 0 $space-xs;
+    display: grid;
+    gap: $space-sm;
+    font-size: $text-xs;
+    line-height: $line-xs;
+
+    .textNotLink {
+      color: $grey-2;
+    }
+
+    .secondaryLink {
+      color: $grey-2;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    .more {
+      @include button();
+      color: $grey-2;
+      justify-items: start;
+      grid-auto-columns: min-content;
+      grid-auto-flow: column;
+      gap: $space-2xs;
+      padding: 0;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

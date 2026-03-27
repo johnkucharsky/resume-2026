@@ -1,0 +1,13 @@
+@use "app/(scss-app)/theme" as *;
+
+.divider {
+  padding: $space-sm $space-xs;
+  height: 1px;
+
+  .line {
+    width: 100%;
+    height: $space-3xs;
+    transform: scaleY(0.5);
+    background-color: rgba(6, 6, 15, 0.25);
+  }
+}

@@ -1,0 +1,172 @@
+/* ================================
+   COLORS
+================================ */
+
+$white: #ffffff;
+$black: #000000;
+$light-black: rgba(0, 0, 0, 0.08);
+$grey-1: #e8eaed;
+$grey-2: rgba(6, 6, 15, 0.6);
+$grey-3: rgba(6, 6, 15, 0.87);
+
+/* ================================
+   BREAKPOINTS
+================================ */
+
+$bp-sm: 575px;
+$bp-md: 768px;
+$bp-xl: 1112px;
+$bp-2xl: 1366px;
+$bp-3xl: 1600px;
+$bp-4xl: 1736px;
+
+$breakpoints: (
+  sm: $bp-sm,
+  md: $bp-md,
+  xl: $bp-xl,
+  2xl: $bp-2xl,
+  3xl: $bp-3xl,
+  4xl: $bp-4xl,
+);
+
+@each $name, $size in $breakpoints {
+  .up-#{$name} {
+    display: none !important;
+
+    @media (min-width: $size) {
+      display: block !important;
+    }
+  }
+
+  .down-#{$name} {
+    display: block !important;
+
+    @media (min-width: $size) {
+      display: none !important;
+    }
+  }
+
+  .up-flex-#{$name} {
+    display: none !important;
+
+    @media (min-width: $size) {
+      display: flex !important;
+    }
+  }
+
+  .down-flex-#{$name} {
+    display: flex !important;
+
+    @media (min-width: $size) {
+      display: none !important;
+    }
+  }
+
+  .up-grid-#{$name} {
+    display: none !important;
+
+    @media (min-width: $size) {
+      display: grid !important;
+    }
+  }
+
+  .down-grid-#{$name} {
+    display: grid !important;
+
+    @media (min-width: $size) {
+      display: none !important;
+    }
+  }
+}
+
+/* ================================
+   SPACING
+================================ */
+
+$space-3xl: 48px;
+$space-2xl: 32px;
+$space-xl: 24px;
+$space-lg: 20px;
+$space-md: 16px;
+$space-sm: 12px;
+$space-xs: 8px;
+$space-2xs: 4px;
+$space-3xs: 2px;
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+
+$text-md: 16px;
+$text-sm: 15px;
+$text-xs: 13px;
+
+$line-sm: 20px;
+$line-xs: 16px;
+
+/* ================================
+   FONT WEIGHTS
+================================ */
+
+$fw-normal: 400;
+$fw-semi-bold: 600;
+
+/* ================================
+   MEDIA MIXINS
+================================ */
+
+@mixin media-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+/* ================================
+   OTHER MIXINS
+================================ */
+
+@mixin button() {
+  display: grid;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin icon-button($size, $radius: $space-sm) {
+  @include button();
+  place-content: center;
+  width: $size;
+  height: $size;
+  border-radius: $radius;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  inset: 0;
+}
+
+@mixin fixed-fill {
+  position: fixed;
+  inset: 0;
+}
+
+@mixin border-overlay($color, $radius: inherit) {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: $radius;
+  border: 1px solid $color;
+  pointer-events: none;
+}

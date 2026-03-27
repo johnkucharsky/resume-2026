@@ -1,40 +1,38 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+import { workExperience } from "./utils/work-experience";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin", "cyrillic", "cyrillic-ext"],
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Docker Example - Standalone Mode",
+  title: "Кучарский Иван Резюме",
   description:
-    "A production-ready example demonstrating how to Dockerize Next.js applications using standalone mode.",
-  keywords: [
-    "Next.js",
-    "Docker",
-    "standalone mode",
-    "containerization",
-    "React",
-    "Node.js",
-  ],
+    "Иван Кучарский — frontend-разработчик с опытом " +
+    workExperience +
+    ". Занимаюсь созданием приложений на React, Vite, Next.js, хорошо пишу на нативном js, html, " +
+    "css. Есть опыт написания и поддержки кастомных ui библиотек",
+  keywords: ["Next.js", "React", "HTML", "CSS"],
   openGraph: {
-    title: "Next.js Docker Example - Standalone Mode",
+    title: "Кучарский Иван Резюме",
     description:
-      "A production-ready example demonstrating how to Dockerize Next.js applications using standalone mode.",
+      "Иван Кучарский — фронтенд-разработчик с опытом " +
+      workExperience +
+      "разработки на React и Next.js",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js Docker Example - Standalone Mode",
+    title: "Кучарский Иван Резюме",
     description:
-      "A production-ready example demonstrating how to Dockerize Next.js applications using standalone mode.",
+      "Иван Кучарский — фронтенд-разработчик с опытом " +
+      workExperience +
+      "разработки на React и Next.js",
   },
 };
 
@@ -44,12 +42,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="ru">
+      <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );
 }

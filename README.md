@@ -1,6 +1,6 @@
-# Next.js Docker Example - Standalone Mode
+# Проект в дополнение к сопроводительному письму
 
-A production-ready example demonstrating how to Dockerize Next.js applications using **standalone mode**. This example showcases best practices for containerizing Next.js apps with Docker.
+Цель создания данного приложения, продемонстрировать как я пишу код. Оно создано с использованием наиболее часто встречаемых в описаниях вакансий технологий (библиотек)
 
 ## Features
 
