@@ -127,10 +127,11 @@
 
   .button {
     @include button();
-    height: $space-2xl;
     padding: $space-xs $space-sm;
     border-radius: $space-xs;
     background-color: $grey-1;
+    font-size: $text-xs;
+    font-weight: $fw-medium;
   }
 
   .contentWrapper {

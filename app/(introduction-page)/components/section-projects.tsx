@@ -1,5 +1,6 @@
 import { introductionStyles } from "app/(introduction-page)/components/introduction-styles";
 import ExternalLink from "app/components/external-link";
+import Link from "next/link";
 import { ReactNode } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -21,9 +22,9 @@ export default function SectionProjects() {
             title={"Сайт"}
             arrowTitle={"Advanced Javascript"}
             description={
-              "Проект предназначен для изучения JS/TS, написан на NextJS"
+              "Проект предназначен для изучения JS/TS, написан на Next.js"
             }
-            tags={["NextJS", "MDX", "Nextra"]}
+            tags={["Next.js", "MDX", "Nextra"]}
           />
           <ProjectItem
             href={"https://react-redux-mui.vercel.app/"}
@@ -66,6 +67,7 @@ export default function SectionProjects() {
               "Effector",
               "Cypress",
               "Formik",
+              "Eslint",
             ]}
           />
           <ProjectItem
@@ -76,11 +78,28 @@ export default function SectionProjects() {
             tags={["GO", "Fiber", "Postgres", "Redis", "Redocly", "Docker"]}
           />
           <ProjectItem
-            href={"https://github.com/johnkucharsky/golang-api"}
-            title={"API"}
-            arrowTitle={"Golang"}
-            description={"API написанное на Golang, документация на redocly"}
-            tags={["GO", "Fiber", "Postgres", "Redis", "Redocly", "Docker"]}
+            href={"https://github.com/johnkucharsky/resume-2026"}
+            title={""}
+            arrowTitle={"Этот сайт"}
+            description={
+              <>
+                Репозиторий содержащий этот лендинг и страницу (
+                <Link
+                  className={"relative text-white font-bold inline-flex"}
+                  href={"/dzen"}
+                >
+                  dzen <GoArrowUpRight />
+                </Link>
+                ) которая является копией страницы{" "}
+                <ExternalLink
+                  className={"relative text-white font-bold inline-flex"}
+                  href={"https://dzen.ru/articles"}
+                >
+                  dzen.ru/articles <GoArrowUpRight />
+                </ExternalLink>
+              </>
+            }
+            tags={["Next.js", "Tailwind CSS", "SCSS", "Eslint"]}
           />
         </ul>
       </div>

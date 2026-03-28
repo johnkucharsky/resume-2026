@@ -10,7 +10,7 @@ export default function Footer() {
         <ExternalLink
           className={linkClassName}
           href={"https://nextjs.org/"}
-          title={"NextJS"}
+          title={"Next.js"}
         >
           Next.js
         </ExternalLink>{" "}

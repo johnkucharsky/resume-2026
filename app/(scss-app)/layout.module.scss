@@ -1,13 +1,11 @@
-@use "app/(scss-app)/theme" as *;
-
 .layout {
-  &:root {
-    --font-inter: "Inter", "Inter Fallback";
-  }
+  font-family: var(--font-inter), serif;
+  min-width: 600px;
 
-  body {
-    font-family: var(--font-inter), serif;
-    min-width: 600px;
+  *,
+  *::before,
+  *::after {
+    font-family: inherit;
   }
 
   p {

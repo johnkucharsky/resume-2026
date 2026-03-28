@@ -22,7 +22,8 @@ export default function SectionExperience() {
             arrowTitle={"Sellego"}
             description={
               "Главный разработчик. Поддержка и развитие проекта. Развитие и доработка собственной библиотеки компонентов. " +
-              "Взаимодействие с дизайнерами и бэкенд разработчиками, оценка задач. Выполнение в очень сжатые сроки. Много нативного JS"
+              " Взаимодействие с дизайнерами и бэкенд разработчиками, обсуждение и оценка выполняемых задач с командой. " +
+              "Выполнение в очень сжатые сроки. Много нативного JS"
             }
             tags={[
               "JavaScript",
@@ -30,7 +31,7 @@ export default function SectionExperience() {
               "React",
               "Zustand",
               "SWR",
-              "Oleg UI",
+              "Eslint",
               "Native HTML JS",
               "SCSS",
               "Storybook",
@@ -43,7 +44,8 @@ export default function SectionExperience() {
             title={"Frontend Разработчик"}
             arrowTitle={"Finchetko"}
             description={
-              "Создание финансового приложения на MUI и NextJS с нуля. Использовал Zod и Cypress для автотестов(100% покрытие)"
+              "Создание финансового приложения на MUI и Next.js с нуля. Использовал Zod для " +
+              "валидации данных и Cypress для автотестов (100% покрытие)"
             }
             tags={[
               "TypeScript",
@@ -54,6 +56,7 @@ export default function SectionExperience() {
               "ZOD",
               "Cypress",
               "Formik",
+              "Eslint",
             ]}
           />
           <ExperienceItem
@@ -61,7 +64,9 @@ export default function SectionExperience() {
             href={"https://7winds.mobi/"}
             title={"Frontend Разработчик"}
             arrowTitle={"7winds"}
-            description={"Работал над одним из модулей платформы Pragmacore"}
+            description={
+              "Работал над одним из модулей платформы Pragmacore. MUI и Redux"
+            }
             tags={[
               "TypeScript",
               "React",
@@ -70,6 +75,7 @@ export default function SectionExperience() {
               "Material UI",
               "Redux",
               "Formik",
+              "Eslint",
             ]}
           />
         </ol>
