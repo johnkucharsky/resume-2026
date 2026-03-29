@@ -87,6 +87,7 @@ export default function SectionProjects() {
                 <Link
                   className={"relative text-white font-bold inline-flex"}
                   href={"/dzen"}
+                  target={"_blank"}
                 >
                   dzen <GoArrowUpRight />
                 </Link>
