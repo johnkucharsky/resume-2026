@@ -1,16 +1,16 @@
 # В дополнение к сопроводительному письму
 
-Немного обо мне [тут](https://resume-2026-iota.vercel.app/)
+Немного обо мне <a href="https://resume-2026-iota.vercel.app/" target="_blank">тут</a>
 
 ## Что внутри?
 
 ### Лэндинг с подробным описанием моего опыта и навыков
 
-`app/(introduction-page)` написано на tailwind - [знакомство](https://resume-2026-iota.vercel.app/)
+`app/(introduction-page)` написано на tailwind - <a href="https://resume-2026-iota.vercel.app/" target="_blank">знакомство</a>
 
-### Дизайн страницы [dzen.ru/articles](https://dzen.ru/articles)
+### Дизайн страницы <a href="https://dzen.ru/articles" target="_blank">dzen.ru/articles</a>
 
-`app/(scss-page)` написано на scss(modules) - [dzen](https://resume-2026-iota.vercel.app/dzen)
+`app/(scss-page)` написано на scss(modules) - <a href="https://resume-2026-iota.vercel.app/dzen" target="_blank">dzen</a>
 
 Далее на английском
 
